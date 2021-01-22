@@ -29,7 +29,7 @@ export default {
     });
   },
   async loadCoaches(context, payload) {
-    if (!payload.forceRefresh && !context.getters.shouldUpdate) {
+    if (payload.forceRefresh && !context.getters.shouldUpdate) {
       return;
     }
 
